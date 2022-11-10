@@ -1,0 +1,250 @@
+@font-face {
+    font-family: 'OTEnjoystoriesBA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/OTEnjoystoriesBA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GmarketSansBold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 400;
+    src: url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff2") format('woff2'),
+    url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff") format('woff'),
+    url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.otf") format('opentype');
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    font-family: 'GmarketSansMedium';
+    background-color: #5b2386;
+    color: #fff;
+    /* position: relative; */
+}
+
+main {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tit-timelaw {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    margin-bottom: 50px;
+}
+
+.txt-hide {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+}
+
+.img-clock {
+    width: 261px;
+    height: 265px;
+}
+
+.img-title {
+    width: 564px;
+    height: auto;
+    position: absolute;
+}
+
+.txt-timelaw {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.txt-timelaw p {
+    text-align: center;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+.img-quotes {
+    position: absolute;
+}
+
+.tit-desc {
+    font-family: 'GmarketSansBold';
+    font-size: 24px;
+}
+
+.cont-inp {
+    margin-top: 80px;
+    font-size: 24px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cont-inp p {
+    display: block;
+}
+
+.cont-inp .txt-wannabe{
+    margin-bottom: 20px;
+}
+
+.cont-inp input {
+    font-size: 24px;
+    text-align: center;
+    color: #BABCBE;
+
+    width: 228px;
+    height: 57px;
+    border-radius: 7px;
+}
+
+.btn-group {
+    display: flex;
+    justify-content: center;
+    margin: 80px auto;
+}
+
+.btn-exc {
+    /* margin-top: 70px; */
+    font-family: 'GmarketSansBold';
+    font-size: 24px;
+    color: #5B2386;
+    background-color: #FCEE21;
+    align-items: center;
+    border-radius: 30px;
+    border: none;
+    padding: 10px 40px;
+    cursor: pointer;
+    width: 565px;
+    height: 66px;
+}
+
+.cont-result {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1.5;
+    margin-bottom: 80px;
+}
+.cont-result .txt-result {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 24px;
+}
+
+.cont-result .txt-result strong {
+    font-size: 72px;
+    font-weight: 700;
+}
+
+.cont-result .btn-go-share {
+    margin-top: 70px;
+}
+
+.btn-go {
+    font-family: 'GmarketSansBold';
+    font-size: 24px;
+    color: #5B2386;
+    background-color: #FCEE21;
+    align-items: center;
+    border-radius: 30px;
+    padding: 10px 40px;
+    cursor: pointer;
+}
+
+.btn-share {
+    font-family: 'GmarketSansBold';
+    font-size: 24px;
+    color: #5B2386;
+    background-color: #fff;
+    align-items: center;
+    border-radius: 30px;
+    padding: 10px 40px;
+    cursor: pointer;
+}
+
+.cont-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 50px;
+}
+
+.cont-footer .txt-footer {
+    margin-top: 20px;
+    font-size: 12px;
+    line-height: 17.38px;
+    text-align: center;
+}
+
+.cont-modal {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.cont-modal .modal-wrapper {
+    background-color: #fff;
+    color: #5B2386;
+    width: 800px;
+    height: 800px;
+    font-family: 'OTEnjoystoriesBA';
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    border-radius: 30px;
+
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-wrapper h2 {
+    font-size: 96px;
+    font-weight: 700;
+}
+
+.modal-wrapper p {
+    font-size: 36px;
+}
+
+.modal-wrapper img{
+    margin-bottom: 70px;
+}
+
+.modal-wrapper button {
+    background: #FCEE21;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 56px;
+    border: none;
+
+}
