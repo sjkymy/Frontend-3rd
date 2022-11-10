@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img
+    srcset="img/logo_3.png 700w,
+            img/logo_2.png 600w,
+            img/logo_1.png 300w"
+    sizes="(min-width: 960px) 250px,
+            (min-width: 620px) 150px,
+            300px"
+    src="a.png"
+    alt="test">
+
+    <picture>
+        <source srcset="./sample/a.jpg" media="(min-width:960px)">
+        <source srcset="./sample/b.jpg" media="(min-width:620px)">
+        <img src="./sample/c.jpg" alt="귀여운 아기 팽귄들">
+    </picture>
+
+    <picture>
+        <source srcset="babies.webp" type="image/webp">
+        <source srcset="babies.avif" type="image/avif">
+        <img src="babies.jpeg" alt="귀여운 아기 팽귄들">
+    </picture>
+</body>
+</html>
