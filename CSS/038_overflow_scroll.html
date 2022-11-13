@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <style>
+        .background {
+            background-color: red;
+        }
+        
+        /* naver 스타일 */
+        .blind {
+                /* 정상적인 흐름에서 항목 제거 */
+            position: absolute;
+
+             /*요소 숨김
+            top과 bottom, left와 right가 같은 값이면 요소를 숨김*/
+            clip: rect(0 0 0 0);
+
+             /* 가능한 가장 작은 크기로 설정.
+            일부 스크린 리더는 높이와 너비가 0인 요소를 무시 */
+            width: 1px;
+            height: 1px;
+
+             /* IE 구버전에서 인식을 못하는 경우가 있음 */
+            margin: -1px;
+
+             /* 크기 조정 후 넘치는 내용 숨기기 */
+            overflow: hidden;
+
+            /* CSS 위치 지정 및 음수 텍스트 들여쓰기 기술(ex) text-indent:-9999px)과 달리
+            "클립 패턴"은 RTL(오른쪽에서 왼쪽) 언어에서도 작동.*/
+        }
+
+        /* daum 스타일 */
+        .screen_out {
+            overflow: hidden;
+            position: absolute;
+            width: 0;
+            height: 0;
+            line-height: 0;
+            text-indent: -9999px;
+        }
+
+        .display_none{
+            display: none;
+        }
+
+        .visibility_hidden{
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+    <h1>hello world</h1>
+    <div class="blind background">naver</div>
+    <div class="screen_out background">daum</div>
+    <div class="display_none background">display none</div>
+    <!-- 영역은 차지하고 있습니다. -->
+    <div class="visibility_hidden background">visibility hidden</div>
+</body>
+</html>
