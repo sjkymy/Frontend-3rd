@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <style>
+            .container {
+                display: flex;
+                width: 100%;
+            }
+            .item {
+                height: 50px;
+                background-color: aqua;
+                border: 1px solid #000;
+            }
+            .item:nth-child(1) {
+                flex-grow: 2;
+            }
+            .item:nth-child(2) {
+                flex-grow: 1;
+            }
+            .item:nth-child(3) {
+                flex-grow: 1;
+            }
+            .item:nth-child(4) {
+                flex-grow: 1;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="items"></div>
+            <div class="items"></div>
+            <div class="items"></div>
+            <div class="items"></div>
+        </div>
+    </body>
+</html>
