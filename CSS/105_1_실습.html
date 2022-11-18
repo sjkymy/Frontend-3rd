@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>106 실습</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            font-size: inherit;
+            font-weight: inherit;
+        }
+
+        .selection {
+            width: 200px;
+            margin: 100px auto;
+
+        }
+
+        /* .txt-hide {
+            position: absolute;
+            clip: rect(0 0 0 0);
+            width: 1px;
+            height: 1px;
+            margin: -1px;
+            overflow: hidden;
+        } */
+
+        .btn-select {
+            width: 100%;
+            height: 40px;
+
+            padding: 11px 20px 11px 13px;
+
+            background: #FFFFFF;
+            border: 1px solid #C4C4C4;
+            border-radius: 10px;
+
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 16px;
+            text-align: left;
+
+            cursor: pointer;
+
+            background: url(images/Polygon_down.png) right 12px center no-repeat;
+
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+
+        .btn-select:focus {
+            outline: 3px;
+            border: 2px solid #9B51E0;
+        }
+
+        .btn-select.on {
+            background: url(images/Polygon_up.png) right 12px center no-repeat;
+        }
+
+        .btn-select.on+.list-member {
+            display: block;
+        }
+
+        .list-member {
+            margin-top: 9px;
+            width: 200px;
+            height: 208px;
+            background: #FFFFFF;
+            border: 1px solid #C4C4C4;
+            box-shadow: 4px 4px 14px rgba(0, 0, 0, 0.15);
+            border-radius: 10px;
+            overflow: hidden;
+            display: none;
+        }
+
+        .list-member li {
+            width: 200px;
+            height: 40px;
+            position: relative;
+        }
+
+        .list-member li button {
+            display: block;
+            height: 100%;
+            width: 100%;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 16px;
+            background-color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        .list-member li button:hover {
+            background: #F8E4FF;
+            border-radius: 8px;
+            position: absolute;
+            width: 184px;
+            height: 30px;
+            left: 8px;
+            top: 5px;
+        }
+
+        .list-member.on {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <article class="selection">
+        <h1 class="txt-hide">1. 최애 프로그래밍 언어</h1>
+        <button class="btn-select"></button>
+        <ul class="list-member">
+            <li><button type="button">Python</button></li>
+            <li><button type="button">Java</button></li>
+            <li><button type="button">JavaScript</button></li>
+            <li><button type="button">C#</button></li>
+            <li><button type="button">C/C++</button></li>
+        </ul>
+    </article>
+
+    <script>
+        const btn = document.querySelector('.btn-select');
+        const list = document.querySelector('.list-member');
+        btn.addEventListener('click', () => {
+            list.classList.toggle('on');
+        });
+        list.addEventListener('click', (event) => {
+            if (event.target.nodeName === "BUTTON") {
+                btn.textContent = event.target.textContent;
+                list.classList.remove('on');
+            }
+        });
+    </script>
+</body>
+</html>
