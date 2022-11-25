@@ -1,0 +1,9 @@
+$mmyy: 10;
+@while $mmyy > 1 {
+    $mmyy: $mmyy - 2;
+    .content-#{$mmyy} {
+        width: 100px;
+        height: 100px;
+        background: red;
+    }
+}

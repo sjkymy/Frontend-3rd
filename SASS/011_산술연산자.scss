@@ -1,0 +1,51 @@
+//Sass 공식문서
+.one {
+    font-size: 10px + 10px;
+}
+
+.two {
+    font-size: 10px - 10px;
+}
+
+//나누기는 괄호가 있어야 한다.
+.three {
+    font-size: (10px / 10);
+}
+
+
+// error
+// .four {
+//     font-size: 10px * 10px;
+// }
+
+// .four {
+//     font-size: 10px * 1in;
+// }
+
+// error
+// .five {
+//     font-size: 10px ** 10px;
+// }
+
+.four {
+    font-size: 10px * 10;
+}
+
+
+//나머지 연산
+//곱하기, 나누기와는 다르게 2개의 단위가 모두 있어도 에러가 나지 않는다.
+// .six {
+//     font-size: 10px % 10px;
+// }
+
+// .six {
+//     font-size: 10px % 3;
+// }
+
+// .six {
+//     font-size: 10px % 1in;
+// }
+
+.six {
+    font-size: 3in % 10px;
+}

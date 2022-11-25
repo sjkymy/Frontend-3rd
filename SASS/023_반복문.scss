@@ -1,0 +1,7 @@
+//#{$변수명}
+@for $mmyy from 1 through 3 {
+    .profile-#{$mmyy} {
+        background-color: red;
+        font-size: #{$mmyy * 10}px;
+    }
+}
