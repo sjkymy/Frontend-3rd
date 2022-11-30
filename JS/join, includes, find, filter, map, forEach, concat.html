@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // const fruit = ['apple', 'melon', 'banana', 'peach', 'grape']
+        // fruit.includes('mango'); //false
+        // fruit.includes('apple'); //true
+        // fruit.includes('banana'); //true
+        // fruit.includes('banana', 3); //false
+
+        // const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        // arr.find(i => i > 5);
+        // //6
+        // arr.find(function (i) {
+        //     return 1 === 2
+        // })
+        // //2
+
+
+        // const arr = [{
+        //     'name': 'title1',
+        //     'contents': 'contents1',
+        //     'dataNum': 1
+        // }, {
+        //     'name': 'title2',
+        //     'contents': 'contents2',
+        //     'dataNum': 2
+        // }, {
+        //     'name': 'title3',
+        //     'contents': 'contents3',
+        //     'dataNum': 3
+        // }, {
+        //     'name': 'title4',
+        //     'contents': 'contents4',
+        //     'dataNum': 4
+        // }, {
+        //     'name': 'title5',
+        //     'contents': 'contents5',
+        //     'dataNum': 5
+        // }];
+
+        // arr.filter(i => i.dataNum > 3);
+        // // [{
+        // //     'name': 'title4',
+        // //     'contents': 'contents4',
+        // //     'dataNum': 4
+        // // }, {
+        // //     'name': 'title5',
+        // //     'contents': 'contents5',
+        // //     'dataNum': 5
+        // // }]
+
+
+
+        // const arr = [{
+        //     'name': 'title1',
+        //     'contents': 'contents1',
+        //     'dataNum': 1,
+        //     'data': [1, 2, 3]
+        // }, {
+        //     'name': 'title2',
+        //     'contents': 'contents2',
+        //     'dataNum': 2,
+        //     'data': [1, 2, 3]
+        // }, {
+        //     'name': 'title3',
+        //     'contents': 'contents3',
+        //     'dataNum': 3,
+        //     'data': [1, 2, 100]
+        // }, {
+        //     'name': 'title4',
+        //     'contents': 'contents4',
+        //     'dataNum': 4,
+        //     'data': [1, 2, 3]
+        // }, {
+        //     'name': 'title5',
+        //     'contents': 'contents5',
+        //     'dataNum': 5,
+        //     'data': [1, 2, 100]
+        // }];
+
+
+        // // arr.map(i => i.name);
+        // const newArr = arr.map(function (i) {
+        //     return i.name
+        // })
+        // //['title1', 'title2', 'title3', 'title4', 'title5']
+
+
+        const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        arr.forEach(function (i) {
+            return console.log(i)
+        });
+
+
+        const cafe = ['coffee'];
+
+        cafe.concat(['cake']);
+        // ['coffee', 'cake']
+
+        cafe.concat(['tea'], 'cookie');
+        // ['coffee', 'tea', 'cookie']
+    </script>
+</body>
+
+</html>
