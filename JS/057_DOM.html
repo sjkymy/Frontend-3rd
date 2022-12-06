@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>057</title>
+</head>
+
+<body>
+    <p></p>
+    <input type="text">
+    <button>Write Something!</button>
+
+    <script>
+        const myBtn = document.querySelector("button");
+        const myP = document.querySelector("p");
+        const myInput = document.querySelector("input");
+
+        // myBtn.addEventListener('click', function () {
+        //     myP.textContent = myInput.value;
+        // });
+
+        myInput.addEventListener('input', ()=>{
+        myP.innerText = myInput.value;
+        });
+        // innerText와 textContent의 차이점
+        // https://developer.mozilla.org/ko/docs/Web/API/HTMLElement/innerText#%EC%98%88%EC%A0%9C
+        //innerText는 사람이 읽을 수 있는 글만 보여준다.
+        //textContent 태그까지 다 보여준다.
+
+        // myP.innerHTML = "<strong>I'm Strong!!</strong>";
+        
+
+
+        const elStrong = document.createElement('strong')
+        const mytxt = document.createTextNode("I'm strong")
+        elStrong.appendChild(mytxt);
+        myP.appendChild(elStrong);
+
+    </script>
+</body>
+
+</html>

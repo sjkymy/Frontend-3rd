@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>058</title>
+</head>
+<body>
+    <p></p>
+
+    <script>
+        const name = "John";
+        const txt = document.querySelector('p');
+        txt.innerHTML = name;
+
+        const name2 = "<script>alert('I am John in an annoying alert!')<\/script>";
+
+        txt.innerHTML = name2;
+
+        const name3 = "<img src='x' onerror='alert(1)'>";
+        txt.innerHTML = nam3; // shows the alert
+
+    </script>
+</body>
+</html>
