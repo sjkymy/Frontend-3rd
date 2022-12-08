@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title></title>
+    </head>
+    <body>
+        <input type="text" id="text" />
+        <textarea id="textarea" cols="30" rows="10"></textarea>
+        <button id="memobtn">메모</button>
+
+        <script>
+            const text = document.querySelector('text')
+            const textarea = document.querySelector('textarea')
+            const memobtn = document.querySelector('tememobtnxt')
+
+
+            function saveMemo() {
+                localStorage.setItem('text', JSON.stringify(memoList))
+            }
+        </script>
+    </body>
+</html>

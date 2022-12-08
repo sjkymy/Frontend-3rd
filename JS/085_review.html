@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      .memo {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+    <title>로컬스토리지</title>
+  </head>
+  <body>
+    <div class="memo">
+      <input type="text" name="" id="name" />
+      <textarea name="" id="text" cols="30" rows="10"></textarea>
+      <button onclick="submit()">제출!</button>
+    </div>
+    <div class="memo-list"></div>
+
+    <script>
+      const name = document.querySelector('input');
+      const text = document.querySelector('textarea');
+      const memoList = document.querySelector('.memo-list');
+      
+      const submit = () => {
+        localStorage.setItem('name', name.value);
+        localStorage.setItem('text', text.value);
+        const p = document.createElement('p');
+        p.innerText = `${localStorage.getItem('name')} : ${localStorage.getItem(
+          'text'
+        )}`;
+        memoList.appendChild(p);
+
+        name.value = '';
+        text.value = '';
+      };
+    </script>
+  </body>
+</html>
