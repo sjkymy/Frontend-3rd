@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>096</title>
+</head>
+
+<body>
+    <h1>나의 todo list</h1>
+    <p>1. 오늘 저녁에는 부대찌개를 끓여 먹겠다. <button type="button">삭제</button></p>
+    <p>2. 후식으로 슈팅스타를 먹겠다. <button type="button">삭제</button></p>
+    <p>3. 자기 전에 반드시 내일 아침 메뉴를 생각해두겠다. <button type="button">삭제</button></p>
+
+    <script>
+        const txts = document.querySelectorAll('p');
+        const btns = document.querySelectorAll('button');
+
+        // 이렇게 써도 가능하나 IE에서 미지원
+        // slice(0, -2)을 하는 이유는 p요소에 버튼이 포함되어 있어 텍스트를 alert로 띄우면 버튼 안에 있는 텍스트도 같이 출력된다.
+        // 마지막 '삭제'라는 두 글자를 지우기 위해서 -2번째 까지 자르는 것이다.
+        // for(const item of txts) {
+        //     item.addEventListener('click', () => {
+        //         alert(event.target.textContent.slice(0, -2))
+        //     })
+        // }
+
+        
+        // 이것도 가능한 것처럼 보이나 IE에서 미지원.
+        // txts.forEach(item => {
+        //     item.addEventListener('click', () => {
+        //         alert(event.target.textContent.slice(0, -2))
+        //     })
+        // })
+        // NodeList의 forEach는 IE에서 지원하지 않는다.
+
+
+        // IE 배열 forEach문 코드 리팩토링
+        // call은 this를 변경할 수 있다. 메서드의 호출 객체를 변경할 수 있다. 
+        //nodeList의 forEach는 IE 지원을 안한다.
+        // IE에도 지원하고 싶다면 Array의 forEach를 빌려온다.
+        // call 메서드의 호출 객체를 변경할 수 있다.
+        // 먼저 Array에 접근한다. 
+        // Array로부터 txts가 forEach를 빌려온다고 생각하자
+        // p요소를 누르면 p요소의 콘텐츠를 출력하는 코드이다.
+        Array.prototype.forEach.call(txts, (item) => {
+            item.addEventListener('click', () => {
+                alert(event.target.textContent.slice(0, -2))
+            })
+        })
+
+        for (const item of btns) {
+            item.addEventListener('click', (event) => {
+                const result = confirm('삭제하시겠습니까?') // result에 false값을 반환한다.
+                
+                event.stopPropagation() // 버튼을 누르면 alert가 나타나는데 위에서 p요소의 콘텐츠를 출력하는 코드때문이다. (버블링 이벤트 적용)
+                // 버블링 단계를 차단하기 위해서 stopPropagation()를 사용한다.
+                if (result) {
+                    item.parentElement.remove(); // 그냥 item.remove()를 하면 p요소 전체가 사라지는 것이 아니라 버튼만 사라진다. 부모 요소 전체를 뜻하는 parentElement와 함께 remove를 사용한다.
+                }
+            })
+        }
+        
+    </script>
+</body>
+
+</html>

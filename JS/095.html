@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>095</title>
+</head>
+
+<body>
+    <!-- 앵커의 기본 동작을 중지 -->
+    <a href="https://www.naver.com" class="link">네이버 링크입니다만..</a>
+
+    <script>
+        // preventDefault()는 기본적인 기능을 막는 것이다.
+        const link = document.querySelector('.link');
+        link.addEventListener('click', (event) => {
+            console.log('clicked');
+            event.preventDefault();
+        })
+    </script>
+
+    <!-- submit 의 기본 동작을 중지 -->
+    <form action="">
+        <button type="submit" class="submit">제출</button>
+    </form>
+    <script>
+        // preventDefault()는 기본적인 기능을 막는 것이다.
+        const submit = document.querySelector('.submit');
+        submit.addEventListener('click', (event) => {
+            console.log('clicked');
+            event.preventDefault();
+        })
+    </script>
+
+
+    <!-- 마우스 오른쪽 클릭 제한하기. -->
+    <!-- <script>
+        document.addEventListener('contextmenu', () => {
+            event.preventDefault();
+            alert('해당 페이지에서는 오른쪽 클릭을 제한합니다.');
+        })
+    </script>
+
+    
+    <!-- 이벤트 전파과정 차단 -->
+    <form action="">
+        <button type="submit" class="submit">제출2</button>
+    </form>
+
+    <script>
+        const submit = document.querySelector('.submit');
+        submit.addEventListener('click', (event) => {
+            console.log('clicked');
+            event.preventDefault();
+            // event.stopPropagation();
+        });
+
+        document.body.addEventListener('click', () => {
+            console.log('event still alive!');
+        }, true);
+    </script>
+</body>
+
+</html>
