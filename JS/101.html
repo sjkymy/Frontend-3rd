@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>101</title>
+</head>
+
+<body>
+    <script>
+        function FoodPicker(foodNames) {
+            this.menu = foodNames;
+            // this.sayMenu = function () {
+            //     console.log(this.menu[Math.floor(Math.random() * this.menu.length)]);
+            // }
+        }
+
+        FoodPicker.prototype.sayMenu = function () {
+            console.log(this.menu[Math.floor(Math.random() * this.menu.length)]);
+        }
+
+        let menuBot = new FoodPicker(['짜장면', '청국장', '김치찌개']);
+        let menuBot2 = new FoodPicker(['짜장면', '청국장', '김치찌개']);
+    </script>
+</body>
+
+</html>
